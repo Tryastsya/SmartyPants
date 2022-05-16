@@ -123,13 +123,14 @@ public class bankABC {
                     totalAmount += totalAmount * interest;
                     interest = interest + 0.0025;
                 }
-
+                totalAmount = (double) (Math.round(totalAmount * 100.0) / 100.0);
+                System.out.println("Congratulations!");
+                System.out.println("Your initial amount is " + amountCD);
+                System.out.println("At the end of your " + periodCD + "-year CD, you'll get " + totalAmount + "!");
+                System.out.println("Thank you for choosing BankABC's CD service.");
+            }else{
+                System.out.println(cdErr);
             }
-            totalAmount = (double) (Math.round(totalAmount * 100.0) / 100.0);
-            System.out.println("Congratulations!");
-            System.out.println("Your initial amount is " + amountCD);
-            System.out.println("At the end of your " + periodCD + "-year CD, you'll get " + totalAmount + "!");
-            System.out.println("Thank you for choosing BankABC's CD service.");
         } else {
             System.out.println(cdErr);
         }
