@@ -109,7 +109,7 @@ public class bankABC {
         System.out.println("Enter CD amount (min 5,000 - max 50,000) you wish to invest:");
         int amountCD = sc.nextInt();
         double totalAmount = amountCD;
-        double interest = 0, yearlyBonusInterest = 0;
+        double interest;
         if (amountCD >= 5000 && amountCD <= 50000) {
             System.out.println("Enter CD period (min 1 - max 5) in years:");
             int periodCD = sc.nextInt();
@@ -121,7 +121,7 @@ public class bankABC {
                 }
                 for (int i = 1; i <= periodCD; i++) {
                     totalAmount += totalAmount * interest;
-                    interest = interest+0.0025;
+                    interest = interest + 0.0025;
                 }
 
             }
